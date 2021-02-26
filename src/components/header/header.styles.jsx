@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import Colors from '../../global.colors';
+
 export const HeaderContainer = styled.div`
     height: 80px;
     width: 100%;
@@ -8,7 +10,7 @@ export const HeaderContainer = styled.div`
     justify-content: space-between;
     margin-bottom: 25px;    
     border-bottom: 1px solid grey;
-    background-color: rgb(228, 175, 156);
+    background-color: ${Colors.header};
 
     @media screen and (max-width: 800px) {
         height: 60px;

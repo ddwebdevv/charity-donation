@@ -9,7 +9,8 @@ import {
     TextWithImage,
     Text
 } from './homepage.styles';
-import { DefaultTitle } from '../../global.styles';
+import { DefaultTitle, TheTitle } from '../../global.styles';
+import Colors from '../../global.colors';
 
 import bgImage from '../../assets/home-history.jpg';
 
@@ -17,8 +18,8 @@ import bgImage from '../../assets/home-history.jpg';
 const HomePage = () => {
     return (
         <PageContainer>
-            <p>Homepage</p>
-            <SectionContainer>
+            <TheTitle>The Charity Organization</TheTitle>
+            <SectionContainer bgColor={Colors.primary}>
                 <DefaultTitle>
                     Mission
                 </DefaultTitle>
@@ -28,7 +29,7 @@ const HomePage = () => {
                     </Text>
                 </ContentContainer>
             </SectionContainer>
-            <SectionContainer bgColor='grey'>
+            <SectionContainer bgColor={Colors.secondary}>
                 <DefaultTitle>
                     History
                 </DefaultTitle>
@@ -38,7 +39,6 @@ const HomePage = () => {
                     </TextWithImage>
                     <ImageContainer>
                         <Image src={bgImage}/>
-                        {/* <img src={bgImage} width='100%' height='100%' /> */}
                     </ImageContainer>
                 </ContentContainer>
             </SectionContainer>

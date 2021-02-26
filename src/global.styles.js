@@ -8,20 +8,23 @@ export const GlobalStyle = createGlobalStyle`
     * {
         box-sizing: border-box;
     }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
 `;
 
 export const DefaultTitle = styled.p`
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
+    margin: 10px;
 `;
 
-// a {
-//     text-decoration: none;
-//     color: black;
-// }
+export const TheTitle = styled.p`
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+`;
 
-// 
-// @media screen and (max-width: 800px) {
-//     padding: 10px;
-// }
