@@ -47,8 +47,11 @@ export const TextWithImage = styled.p`
 `;
 
 export const ImageContainer = styled.div`
+flex: 1;
+justify-content: stretch;
+  align-items: stretch;
     width: 50%;
-    height: 100%;
+    height: calc(100% + 10px);
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 5px 10px 20px 2px rgb(0 0 0 / 50%);
@@ -56,6 +59,7 @@ export const ImageContainer = styled.div`
     @media (min-width: 768px) {
         width: 40%;
     }
+    
 `;
 
 export const Image = styled.img`

@@ -7,4 +7,7 @@ body {
   align-items: stretch;
   box-shadow: 5px 10px 20px 2px rgb(0 0 0 / 50%);
   background-image: url();
+  justify-content: stretch;
+  align-items: stretch;
+  object-fit:;
 }
