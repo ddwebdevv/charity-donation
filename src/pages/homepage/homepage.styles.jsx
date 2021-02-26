@@ -12,7 +12,7 @@ export const PageContainer = styled.div`
 
 export const SectionContainer = styled.div`
     background-color: ${props => props.bgColor};
-    padding: 1rem 2rem 5rem 2rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,6 +46,7 @@ export const TextWithImage = styled.p`
     font-size: 1.3rem;
     width: 50%;
     padding: 0 2rem;
+    text-align: justify;
 
     @media (min-width: 1300px) {
         width: 60%;
@@ -80,6 +81,12 @@ export const Image = styled.img`
     height: 100%;
     width: 100%;
     display: block;
+
+    :hover {
+        cursor: pointer;
+        transform: scale(1.15);
+        transition: transform 3s cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    }
 `;
 
 

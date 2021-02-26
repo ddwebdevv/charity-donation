@@ -8,7 +8,6 @@ export const HeaderContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;    
     border-bottom: 1px solid grey;
     background-color: ${Colors.header};
 

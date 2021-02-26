@@ -5,6 +5,7 @@ import ContactUs from './pages/contactus/contactus.component';
 import DonatePage from './pages/donatepage/donatepage.component';
 import HomePage from './pages/homepage/homepage.component';
 import Header from './components/header/header.component';
+import Footer from './components/footer/footer.component';
 
 import { GlobalStyle } from './global.styles';
 
@@ -18,6 +19,7 @@ function App() {
         <Route exact path='/donate' component={DonatePage} />
         <Route exact path='/contactus' component={ContactUs} />
       </Switch>
+      <Footer />
     </div>
   );
 }
