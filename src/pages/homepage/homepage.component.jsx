@@ -60,7 +60,7 @@ const HomePage = ({ history, match }) => {
                         Enter Your Email
                     </Label>
                 </InputContainer>
-                <CustomButton onClick={(event) => alert('Thank you for subscribing!')}>
+                <CustomButton onClick={() => alert('Thank you for subscribing!')}>
                     Subscribe!
                 </CustomButton>
             </ContentWrapper>

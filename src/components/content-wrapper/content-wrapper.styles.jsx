@@ -15,7 +15,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-padding: 10px 3rem;
+padding: 10px 1rem;
 max-width: 1300px;
 
 @media (max-width: 1300px) {

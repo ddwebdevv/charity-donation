@@ -14,7 +14,6 @@ export const HeaderContainer = styled.div`
     @media screen and (max-width: 800px) {
         height: 60px;
         padding: 10px;
-        margin-bottom: 20px;
     }
 `;
 
