@@ -1,10 +1,14 @@
 import styled, { css } from 'styled-components';
+import Colors from '../../global.colors';
+
+
 
 
 const donateButtonStyles = css`
     background-color: red;
     color: white;
     border: none;
+    text-transform: uppercase;
 
     &:hover {
         background-color: white;
@@ -17,10 +21,11 @@ const invertedButton = css`
     background-color: white;
     color: black;
     border: 1px solid black;
+    min-width: 125px;
+    height: 36px;
     
     &:hover {
-      background-color: black;
-      color: white;
+      background-color: ${Colors.primary};
       border: none;
     }
 `;
@@ -42,13 +47,13 @@ export const CustomButtonContainer = styled.button`
     line-height: 50px;
     border-radius: 25px;
     padding: 0 30px;
-    font-size: 15px;    
-    text-transform: uppercase;
+    font-size: 15px;
     font-family:  'Noto Serif', serif;
     font-weight: bolder;
     cursor: pointer;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     ${getButtonStyles}
 

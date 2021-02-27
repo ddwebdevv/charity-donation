@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 
 
@@ -10,30 +10,6 @@ export const PageContainer = styled.div`
     text-align: center;
 `;
 
-export const SectionContainer = styled.div`
-    background-color: ${props => props.bgColor};
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-`;
-
-export const ContentContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 3rem;
-    max-width: 1300px;
-
-    @media (max-width: 1300px) {
-        flex-direction: column;
-        padding: 0 1rem;
-    }
-    
-`;
 
 export const Text = styled.p`
     font-size: 1.5rem;
@@ -87,6 +63,53 @@ export const Image = styled.img`
         transform: scale(1.15);
         transition: transform 3s cubic-bezier(0.1, 0.7, 1.0, 0.1);
     }
+`;
+
+const shrink = css`
+    top: 14px;
+    font-size: 12px;
+`;
+
+export const Input = styled.input`
+    background: none;
+    background-color: white;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid black;
+    margin: 25px 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus ~ label {
+        ${shrink}
+      }
+`;
+
+
+export const Label = styled.label`
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 35px;
+    transition: 300ms ease all;
+    color: grey;
+
+    &.shrink {
+        ${shrink}
+    }
+`;
+
+export const InputContainer = styled.div`
+  position: relative;
+  margin: 15px 0;
 `;
 
 

@@ -14,10 +14,10 @@ const Footer = () => {
     return (
         <FooterContainer>
             <SocialLinksContainer>
-                <Icon color='#4267B2'>
-                    <FontAwesomeIcon icon={faFacebook} />
+                <Icon color='#4267B2' to={{ pathname: "https://github.com/ddwebdevv?tab=repositories" }} target="_blank">
+                    <FontAwesomeIcon icon={faFacebook}/>
                 </Icon>
-                <Icon color='#E1306C'>
+                <Icon color='#C13584' to={{ pathname: 'https://www.linkedin.com/in/dmitry-dergunov-5a21161b6/' }} target="_blank">
                     <FontAwesomeIcon icon={faInstagram} />
                 </Icon>
             </SocialLinksContainer>            

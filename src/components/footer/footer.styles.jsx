@@ -1,11 +1,12 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import Colors from '../../global.colors';
 
 export const FooterContainer = styled.div`
     background-color: ${Colors.footer}
 `;
 
-export const Icon = styled.span`
+export const Icon = styled(Link)`
     font-size: 2.5rem;
     margin: 0 10px;
     color: ${props => props.color};

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ReactComponent as Logo } from '../../assets/logo2.svg';
 
-import { HeaderContainer, LogoContainer, OptionsContainer, OptionDiv, OptionLink } from './header.styles';
+import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink } from './header.styles';
 
 
 const Header = () => {
