@@ -31,6 +31,11 @@ export const Container = styled.div`
     margin-top: 4rem;
     max-width: 1300px;
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
     background-color: ${Colors.secondary};
 
     @media screen and (max-width: 768px) {

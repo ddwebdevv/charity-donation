@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
+import { Modal } from 'react-rainbow-components';
 
 import {
     PageContainer,
@@ -21,9 +22,15 @@ import ContentWrapper from '../../components/content-wrapper/content-wrapper.com
 
 const HomePage = ({ history, match }) => {
     const [email, setEmail] = useState('');
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const inputHandle = (e) => {
         setEmail(e.target.value);
+    };
+
+    const handleModalClose = () => {
+        setIsModalOpen(false);
+        setEmail('');
     };
 
     return (
@@ -60,10 +67,18 @@ const HomePage = ({ history, match }) => {
                         Enter Your Email
                     </Label>
                 </InputContainer>
-                <CustomButton onClick={() => alert('Thank you for subscribing!')}>
+                <CustomButton onClick={() => setIsModalOpen(true)}>
                     Subscribe!
                 </CustomButton>
             </ContentWrapper>
+            <Modal
+                isOpen={isModalOpen}
+                onRequestClose={handleModalClose}
+            >
+                <Text>Thank you,</Text>
+                <Text>{email}</Text>
+                <Text>Helping others you are making this world a better place!</Text>
+            </Modal>
         </PageContainer>
     );
 };

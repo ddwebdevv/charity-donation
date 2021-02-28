@@ -1,5 +1,7 @@
 import React from 'react';
 
+import RadioButtonGroup from '../../components/radio-button-group/radio-button-group.component';
+
 import {
     BgImage,
     Container,
@@ -9,7 +11,13 @@ import {
 import { DefaultTitle } from '../../global.styles';
 
 const DonatePage = () => {
-    const bgImage = './donate.jpg'
+    const bgImage = './donate.jpg';
+    const options = [
+        'Monthly',
+        'Weekly',
+        'One-Time',
+        'another'
+    ];
 
     return (
         <>
@@ -22,6 +30,11 @@ const DonatePage = () => {
                 <Text>
                     The Charity Organization works tirelessly to help everyone in need access the vital medical supplies they need to survive. Right now this is more important than ever. You can make a difference. Support of the urgent humanitarian needs of the Charity Organization with your financial gift.
                 </Text>
+                <RadioButtonGroup
+                    options={options}
+                    borderRadius='10px'
+                    styles={{ width: '50%' }}
+                />
             </Container>
         </PageContainer>
         </>
