@@ -31,7 +31,7 @@ export const CustomRadioButtonContainer = styled.div`
     }
 
     @media (max-width: 768px) {
-        width: 80%;
+        font-size: 12px;
         padding: 0;
     }
 `;

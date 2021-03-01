@@ -10,4 +10,9 @@ export const RadioButtonGroupContainer = styled.div`
     border-radius: ${({ borderRadius }) => borderRadius || '0px'};
     background-color: ${Colors.notActiveButton};
     ${({ styles }) => styles};
+
+    @media (max-width: 768px) {
+        width: 80%;
+        padding: 0;
+    }
 `;
