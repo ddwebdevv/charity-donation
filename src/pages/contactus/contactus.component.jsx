@@ -27,7 +27,7 @@ const ContactUs = () => {
             <Text>This project was made with following goals in mind:</Text>
             <ListContainer>
                 <List>
-                    <li><LiText>create PWA</LiText></li>
+                    <li><LiText>create Progressive Web App</LiText></li>
                     <li><LiText>creating simple reusable components for this project</LiText></li>
                     <li><LiText>creating complex reusable components( RadioButtonGroup) which can be used as open source components library</LiText></li>
                     <li><LiText>demonstrating ability to write high quality and maintainable code</LiText></li>
