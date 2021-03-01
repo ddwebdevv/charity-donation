@@ -28,3 +28,13 @@ export const TheTitle = styled.p`
     text-align: center;
 `;
 
+export const Text = styled.p`
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    width: 100%;
+    font-style: italic;
+`;
+
+
+
+

@@ -11,12 +11,7 @@ export const PageContainer = styled.div`
 `;
 
 
-export const Text = styled.p`
-    font-size: 1.5rem;
-    padding: 0 2rem;
-    width: 100%;
-    font-style: italic;
-`;
+
 
 export const TextWithImage = styled.p`
     font-size: 1.3rem;
@@ -44,12 +39,12 @@ export const ImageContainer = styled.div`
     border-radius: 10px;
     box-shadow: 5px 10px 20px 2px black;
 
-    @media (min-width: 1300px) {
+    @media (min-width: 1200px) {
         width: 40%;
     }
 
-    @media (max-width: 1300px) {
-        width: 100%;
+    @media (max-width: 1200px) {
+        width: 80%;
     }
 `;
 

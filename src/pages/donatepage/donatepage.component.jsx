@@ -1,28 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 
 import RadioButtonGroup from '../../components/radio-button-group/radio-button-group.component';
+import CustomButton from '../../components/custom-button/custom-button.component';
 
 import {
-    BgImage,
     Container,
     Text,
-    PageContainer
+    PageContainer,
+    Image
 } from './donatepage.styles';
 import { DefaultTitle } from '../../global.styles';
+import CustomModal from '../../components/modal/modal.component';
 
 const DonatePage = () => {
     const bgImage = './donate.jpg';
+    const shopImage = './groceries.jpg';
     const options = [
         'Monthly',
         'Weekly',
-        'One-Time',
-        'another'
+        'One-Time'
+    ];
+    const percentOptions = [
+        '5%',
+        '10%',
+        '15%',
+        '20%',
+        'Other'
     ];
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleModalClose = () => {
+        setIsModalOpen(false);
+    };
+
     return (
-        <>
-        <BgImage imageUrl={process.env.PUBLIC_URL + bgImage} />
-        <PageContainer>
+        <PageContainer imageUrl={process.env.PUBLIC_URL + bgImage}>
             <Container>
                 <DefaultTitle>
                     Make a donation
@@ -32,12 +46,30 @@ const DonatePage = () => {
                 </Text>
                 <RadioButtonGroup
                     options={options}
-                    borderRadius='10px'
-                    styles={{ width: '50%' }}
+                    borderRadius='25px'
+                    styles={{ width: '65%', margin: '20px' }}
+                />
+                <Image src={process.env.PUBLIC_URL + shopImage} />
+                <Text style={{ textAlign: 'center' }}>Whenever you buy groceries, donate</Text>
+                <RadioButtonGroup
+                    options={percentOptions}
+                    borderRadius='25px'
+                    styles={{ width: '65%', margin: '20px', 'min-width': '50%' }}
+                />
+                <CustomButton donate style={{ marginBottom: '30px' }}
+                    onClick={() => setIsModalOpen(true)}
+                >
+                    Donate!
+                </CustomButton>
+                <Text>Your donations matter, because every donation we receive goes toward the people who are less fortunate. Help us and join our cause. </Text>
+                <CustomModal
+                    isModalOpen={isModalOpen}
+                    handleModalClose={handleModalClose}
+                    title='Thank you for your generous donation!'
+                    text='Helping others you are making this world a better place!'
                 />
             </Container>
         </PageContainer>
-        </>
     );
 };
 

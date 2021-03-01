@@ -20,8 +20,18 @@ export const CustomRadioButtonContainer = styled.div`
     color: white;
     border: none;
 
+    &:hover {
+        filter: brightness(0.7);
+    }
+
     &.active {
         background-color: ${Colors.activeButton};
         transform: scale(1.15);
+        z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+        width: 80%;
+        padding: 0;
     }
 `;

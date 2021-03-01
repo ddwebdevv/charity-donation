@@ -3,43 +3,34 @@ import Colors from '../../global.colors';
 
 
 
-export const BgImage = styled.div`
-    min-height: 86vh;
-    background-image: ${({ imageUrl }) => `url(${imageUrl})`};
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-`;
-
 export const PageContainer = styled.div`
-    position: absolute;
-    z-index: 2;
+    min-height: 86vh;
     top: 80px;
     left: 0px;
     right: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 `;
 
 export const Container = styled.div`
-    margin-top: 4rem;
+    margin: 4rem 0;
     max-width: 1300px;
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
     
     background-color: ${Colors.secondary};
 
     @media screen and (max-width: 768px) {
-        margin-top: 0.5rem;
+        margin: 0.5rem 0;
         width: 90%;
     }
 `;
@@ -53,4 +44,11 @@ export const Text = styled.p`
     @media screen and (max-width: 768px) {
         font-size: 1rem;
     }
+`;
+
+export const Image = styled.img`
+    width: 100px;
+    height: auto;
+    border: 3px solid black;
+    margin: 50px;
 `;

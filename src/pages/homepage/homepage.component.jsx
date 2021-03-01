@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Modal } from 'react-rainbow-components';
 
 import {
     PageContainer,
     Image,
     ImageContainer,
     TextWithImage,
-    Text,
     Input,
     Label,
     InputContainer
 } from './homepage.styles';
-import { DefaultTitle, TheTitle } from '../../global.styles';
+import { DefaultTitle, TheTitle, Text } from '../../global.styles';
 import Colors from '../../global.colors';
 
 import bgImage from '../../assets/home-history.jpg';
 import CustomButton from '../../components/custom-button/custom-button.component';
 import ContentWrapper from '../../components/content-wrapper/content-wrapper.component';
+import CustomModal from '../../components/modal/modal.component';
 
 
 const HomePage = ({ history, match }) => {
@@ -45,7 +44,9 @@ const HomePage = ({ history, match }) => {
                 <DefaultTitle>
                     Change Lives!
                 </DefaultTitle>
-                <CustomButton donate style={{ margin: '10px 40px'}}>
+                <CustomButton donate style={{ margin: '10px 40px'}}
+                    onClick={() => history.push('/donate')}
+                >
                     Donate!
                 </CustomButton>
                 <DefaultTitle>
@@ -71,14 +72,13 @@ const HomePage = ({ history, match }) => {
                     Subscribe!
                 </CustomButton>
             </ContentWrapper>
-            <Modal
-                isOpen={isModalOpen}
-                onRequestClose={handleModalClose}
-            >
-                <Text>Thank you,</Text>
-                <Text>{email}</Text>
-                <Text>Helping others you are making this world a better place!</Text>
-            </Modal>
+            <CustomModal
+                isModalOpen={isModalOpen}
+                handleModalClose={handleModalClose}
+                title='Thank you,'
+                varText={email}
+                text='Helping others you are making this world a better place!'
+            />
         </PageContainer>
     );
 };

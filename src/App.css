@@ -1,6 +1,6 @@
-/* body {
+body {
   font-family: 'Noto Serif', serif;
-  background-color: #f1e6d1;
+  background-color: rgb(81, 83, 95);
   border-radius: 10px;
   overflow: hidden;
   background-size: inherit;
@@ -9,5 +9,4 @@
   background-image: url();
   justify-content: stretch;
   align-items: stretch;
-  object-fit:;
-} */
+}

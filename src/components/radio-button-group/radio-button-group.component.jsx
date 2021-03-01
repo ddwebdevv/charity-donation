@@ -7,12 +7,8 @@ import {
 } from './radio-button-group.styles';
 
 const RadioButtonGroup = ({ options, styles, borderRadius }) => {
-    //
-    // active from state
-    // width from mapping/props
     const [activeButton, setActiveButton] = useState(0);
 
-    console.log('render component');
     const width = `${(100 / (options.length)).toFixed(2)}%`;
 
     return (

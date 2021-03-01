@@ -6,7 +6,6 @@ export const RadioButtonGroupContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: ${({ width }) => width || '100%'};
-    overflow: hidden;
     margin: 0;
     border-radius: ${({ borderRadius }) => borderRadius || '0px'};
     background-color: ${Colors.notActiveButton};
