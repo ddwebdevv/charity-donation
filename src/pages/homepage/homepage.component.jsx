@@ -5,10 +5,7 @@ import {
     PageContainer,
     Image,
     ImageContainer,
-    TextWithImage,
-    Input,
-    Label,
-    InputContainer
+    TextWithImage
 } from './homepage.styles';
 import { DefaultTitle, TheTitle, Text } from '../../global.styles';
 import Colors from '../../global.colors';
@@ -17,6 +14,7 @@ import bgImage from '../../assets/home-history.jpg';
 import CustomButton from '../../components/custom-button/custom-button.component';
 import ContentWrapper from '../../components/content-wrapper/content-wrapper.component';
 import CustomModal from '../../components/modal/modal.component';
+import FormInput from '../../components/form-input/form-input.component';
 
 
 const HomePage = ({ history, match }) => {
@@ -62,12 +60,12 @@ const HomePage = ({ history, match }) => {
                 </ImageContainer>
             </ContentWrapper>
             <ContentWrapper title='Do not miss latest news'>
-                <InputContainer>
-                    <Input type='text' value={email} onChange={inputHandle} />
-                    <Label className={email.length ? 'shrink' : ''}>
-                        Enter Your Email
-                    </Label>
-                </InputContainer>
+                <FormInput
+                     value={email}
+                     onChange={inputHandle}
+                     condition={email.length}
+                     label='Enter Your Email'
+                />
                 <CustomButton onClick={() => setIsModalOpen(true)}>
                     Subscribe!
                 </CustomButton>

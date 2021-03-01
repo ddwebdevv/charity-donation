@@ -20,6 +20,10 @@ export const DefaultTitle = styled.p`
     font-weight: bold;
     text-align: center;
     margin: 10px;
+
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+    }
 `;
 
 export const TheTitle = styled.p`
@@ -33,6 +37,10 @@ export const Text = styled.p`
     padding: 0 2rem;
     width: 100%;
     font-style: italic;
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
 `;
 
 
